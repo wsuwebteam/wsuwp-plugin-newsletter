@@ -1,0 +1,38 @@
+.wsu-newsletter-item-wrapper {
+    //-webkit-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.3); 
+    // box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.3);
+    padding: 1rem !important;
+    border-bottom: 2px solid #ddd;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 15px;
+        bottom: 15px;
+        background-color: #777;
+        width: 5px;
+        height: auto;
+        left: -10px;
+    }
+}
+
+.wsu-newsletter-item__title {
+
+    label {
+        display: none !important;
+    }
+
+    input {
+        border: none !important;
+        box-shadow: none !important;
+        font-size: 1.25rem !important;
+        padding: 0 !important;
+    }
+
+    .is-linked input {
+        text-decoration: underline !important;
+        color: #a60f2d !important;
+    }
+
+}
