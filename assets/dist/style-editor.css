@@ -1,0 +1,72 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/newsletter-date/editor/style.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
+.wsu-newsletter-date {
+  padding: 1rem 2rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: #555;
+}
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/newsletter-text/editor/style.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
+.wsu-newsletter-text-wrapper {
+  border: 1px dashed #000;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+}
+
+.wsu-newsletter-text__helper {
+  max-width: 400px;
+  text-align: center;
+  color: #777;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.75rem 0;
+  margin: 0 auto;
+  border-top: 1px solid #ddd;
+}
+/*!********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/newsletter-heading/editor/style.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************************/
+.wsu-newsletter-heading {
+  border-top: 1px solid #777;
+  border-bottom: 1px solid #777;
+  padding: 1rem 0 !important;
+}
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./blocks/newsletter-item/editor/style.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
+.wsu-newsletter-item-wrapper {
+  padding: 1rem !important;
+  border-bottom: 2px solid #ddd;
+  position: relative;
+}
+.wsu-newsletter-item-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  bottom: 15px;
+  background-color: #777;
+  width: 5px;
+  height: auto;
+  left: -10px;
+}
+
+.wsu-newsletter-item__title label {
+  display: none !important;
+}
+.wsu-newsletter-item__title input {
+  border: none !important;
+  box-shadow: none !important;
+  font-size: 1.25rem !important;
+  padding: 0 !important;
+}
+.wsu-newsletter-item__title .is-linked input {
+  text-decoration: underline !important;
+  color: #a60f2d !important;
+}
+
+/*# sourceMappingURL=style-editor.css.map*/
