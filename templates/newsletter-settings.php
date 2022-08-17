@@ -17,7 +17,7 @@
 			<label>After Content (HTML)</label>
 			<textarea name="template_after"><?php echo Newsletter_Post_Type::get_option( 'template_after', '', 'decode' ); ?></textarea>
 		</div>
-		<div>Supported Merge Tags: [[post-title]] [[publish-date]]</div>
+		<div>Supported Merge Tags: [[post-title]] [[publish-date]] [[url]]</div>
 	</fieldset>
 	<button type="submit" class="button-primary" name="newsletter_save" value="update">Save</button>
 	<hr />

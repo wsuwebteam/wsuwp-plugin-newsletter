@@ -2,21 +2,26 @@
 
 define( 'WSUISEMAILOUTPUT', true );
 
-echo Newsletter_Post_Type::get_option( 'template_before', '', 'decode' );
+$merge_args = array();
+
+$content = Newsletter_Post_Type::get_option( 'template_before', '', 'decode' );
 
 if ( have_posts() ) {
 	while ( have_posts() ) {
 		the_post(); 
 
+		$merge_args['[[url]]'] = get_permalink();
+
 		ob_start();
 		
         the_content();
 
-		$content = ob_get_clean();
+		$content .= str_replace( '<p></p>', '', ob_get_clean() );
 
-		echo str_replace( '<p></p>', '', $content );
-        
 	} // end while
 } // end if
 
-echo Newsletter_Post_Type::get_option( 'template_after', '', 'decode' );
+$content .= Newsletter_Post_Type::get_option( 'template_after', '', 'decode' );
+
+echo Email_Template::template_replace( $content, $merge_args );
+

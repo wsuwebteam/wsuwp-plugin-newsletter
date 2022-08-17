@@ -52,6 +52,18 @@ class Email_Template {
 
 	}
 
+	public static function template_replace( $content, $replace_array = array() ) {
+
+		foreach ( $replace_array as $merge_tag => $replace_value ) {
+
+			$content = str_replace( $merge_tag, $replace_value, $content );
+
+		}
+
+		return $content;
+
+	}
+
 
 
 }
