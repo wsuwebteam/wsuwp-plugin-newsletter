@@ -57,16 +57,17 @@ class Blocks {
 
 		require_once Plugin::get( 'dir' ) . 'blocks/newsletter-item/block.php';
 
-		//add_action( 'init', array( __CLASS__, 'register' ) );
-
 	}
-
-
-	
 
 	public static function remove_blocks( $allowed_blocks, $post ) {
 
-		return self::$allowed_blocks;
+		if ( 'newsletter' === $post->post_type ) {
+
+			return self::$allowed_blocks;
+
+		}
+
+		return $allowed_blocks;
 
 	}
 
