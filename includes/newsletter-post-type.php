@@ -81,6 +81,7 @@ class Newsletter_Post_Type {
 				array( 'wsuwp/newsletter-heading', array() ),
 				array( 'wsuwp/newsletter-item', array() ),
 			),
+			'taxonomies' => array( 'category', 'post_tag' ),
 		);
 
 		register_post_type( self::$post_type, $args );
