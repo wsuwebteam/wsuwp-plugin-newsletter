@@ -8,8 +8,6 @@ class Scripts {
 
 		add_action( 'init', array( __CLASS__, 'register_block_editor_assets' ) );
 
-        add_action( 'admin_enqueue_scripts', array( __CLASS__, 'enqueue_assets' ) );
-
 	}
 
     public static function register_block_editor_assets() {
@@ -32,13 +30,6 @@ class Scripts {
 		);
 	}
 
-
-    public static function enqueue_assets() {
-
-		//wp_enqueue_script( 'wsuwp-plugin-newsletter-editor-scripts' );
-		//wp_enqueue_style( 'wsuwp-plugin-newsletter-editor-styles' );
-
-	}
 }
 
 Scripts::init();
