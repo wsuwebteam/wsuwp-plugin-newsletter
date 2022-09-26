@@ -3,3 +3,4 @@
  import '../../blocks/newsletter-text/editor/block';
  import '../../blocks/newsletter-heading/editor/block';
  import '../../blocks/newsletter-item/editor/block';
+ import '../../blocks/newsletter-image/editor/block';

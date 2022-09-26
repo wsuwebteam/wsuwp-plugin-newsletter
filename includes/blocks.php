@@ -11,6 +11,7 @@ class Blocks {
 		'wsuwp/newsletter-text',
 		'wsuwp/newsletter-heading',
 		'wsuwp/newsletter-item',
+		'wsuwp/newsletter-image',
 	);
 
 
@@ -56,6 +57,8 @@ class Blocks {
 		require_once Plugin::get( 'dir' ) . 'blocks/newsletter-heading/block.php';
 
 		require_once Plugin::get( 'dir' ) . 'blocks/newsletter-item/block.php';
+
+		require_once Plugin::get( 'dir' ) . 'blocks/newsletter-image/block.php';
 
 	}
 

@@ -53,6 +53,13 @@
 	</fieldset>
 	<fieldset>
 		<div class="wsu-plugin-newsletter__setting">
+			<label>Newsletter Image Component (HTML)</label>
+			<textarea name="template_image"><?php echo Newsletter_Post_Type::get_option( 'template_image', '', 'decode' ); ?></textarea>
+			<div>Supported Merge Tags: [[img_src]] [[img_alt]] [[img_caption]] [[img_credit]]</div>
+		</div>
+	</fieldset>
+	<fieldset>
+		<div class="wsu-plugin-newsletter__setting">
 			<label>Newsletter Heading Component (HTML)</label>
 			<textarea name="template_heading"><?php echo Newsletter_Post_Type::get_option( 'template_heading', '', 'decode' ); ?></textarea>
 			<div>Supported Merge Tags: [[heading]] [[level]]</div>

@@ -124,6 +124,7 @@ class Newsletter_Post_Type {
 			'template_content'  => 'none',
 			'template_heading'  => 'none',
 			'template_item'     => 'none',
+			'template_image'    => 'none',
 			'template_a_styles' => 'none',
 			'template_p_styles' => 'none',
 		);
