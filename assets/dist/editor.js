@@ -362,7 +362,7 @@ function Edit(props) {
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "block-newsletter-image-content"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.TextareaControl, {
-    label: "Image Cation",
+    label: "Image Caption",
     value: attributes.imgCaption,
     onChange: imgCaption => setAttributes({
       imgCaption

@@ -52,7 +52,7 @@ export default function Edit( props ) {
                 </div>
                 <div className="block-newsletter-image-content">
                     <TextareaControl
-                        label="Image Cation"
+                        label="Image Caption"
                         value={ attributes.imgCaption }
                         onChange={ ( imgCaption ) => setAttributes( { imgCaption } ) }
                     />
