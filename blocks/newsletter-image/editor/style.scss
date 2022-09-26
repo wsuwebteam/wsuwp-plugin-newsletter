@@ -1,28 +1,27 @@
-.wp-block-wsuwp-newsletter-image {
 
-    .block-newsletter-image-wrapper {
-        display: flex;
-    }
-    .block-newsletter-image-frame {
-        position: relative;
-        margin: 0 auto;
-        background-color: #eee;
-        min-height: 300px;
-        max-width: 300px;
 
-        .block-editor-media-placeholder {
-            width: 90%;
-            position: absolute;
-            bottom: 10px;
-            right: 5%;
-            left: 5%;
-        }
-
-    }
-
-    .block-newsletter-image-content {
-        flex-grow: 1;
-        padding: 2rem;
-    }
-    
+.block-newsletter-image-wrapper {
+    display: flex;
 }
+.block-newsletter-image-frame {
+    position: relative;
+    margin: 0 auto;
+    background-color: #eee;
+    min-height: 300px;
+    max-width: 300px;
+
+    .block-editor-media-placeholder {
+        width: 90%;
+        position: absolute;
+        bottom: 10px;
+        right: 5%;
+        left: 5%;
+    }
+
+}
+
+.block-newsletter-image-content {
+    flex-grow: 1;
+    padding: 2rem;
+}
+    
