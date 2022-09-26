@@ -31,6 +31,7 @@ class Plugin {
 		require_once __DIR__ . '/email-template.php';
 		require_once __DIR__ . '/scripts.php';
 		require_once __DIR__ . '/sidebars.php';
+		require_once __DIR__ . '/images.php';
 
 	}
 

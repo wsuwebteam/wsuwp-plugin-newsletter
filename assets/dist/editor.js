@@ -14,6 +14,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_newsletter_text_editor_block__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../blocks/newsletter-text/editor/block */ "./blocks/newsletter-text/editor/block.js");
 /* harmony import */ var _blocks_newsletter_heading_editor_block__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../blocks/newsletter-heading/editor/block */ "./blocks/newsletter-heading/editor/block.js");
 /* harmony import */ var _blocks_newsletter_item_editor_block__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../blocks/newsletter-item/editor/block */ "./blocks/newsletter-item/editor/block.js");
+/* harmony import */ var _blocks_newsletter_image_editor_block__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../blocks/newsletter-image/editor/block */ "./blocks/newsletter-image/editor/block.js");
+
 
 
 
@@ -246,6 +248,132 @@ function Edit(props) {
     placeholder: "Add Heading..." // Display this text before any content has been added by the user
 
   }));
+}
+
+/***/ }),
+
+/***/ "./blocks/newsletter-image/editor/block.js":
+/*!*************************************************!*\
+  !*** ./blocks/newsletter-image/editor/block.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./edit */ "./blocks/newsletter-image/editor/edit.js");
+
+
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)("wsuwp/newsletter-image", {
+  title: "Newsletter Image Section",
+  icon: "admin-users",
+  category: "text",
+  attributes: {
+    imgStyle: {
+      type: "string",
+      default: ""
+    },
+    imgId: {
+      type: "integer",
+      default: 0
+    },
+    imgSrc: {
+      type: "string",
+      default: ""
+    },
+    imgCaption: {
+      type: "string",
+      default: ""
+    },
+    imgCredit: {
+      type: "string",
+      default: ""
+    }
+  },
+  edit: _edit__WEBPACK_IMPORTED_MODULE_1__["default"]
+});
+
+/***/ }),
+
+/***/ "./blocks/newsletter-image/editor/edit.js":
+/*!************************************************!*\
+  !*** ./blocks/newsletter-image/editor/edit.js ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Edit)
+/* harmony export */ });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.scss */ "./blocks/newsletter-image/editor/style.scss");
+
+
+
+
+const {
+  useBlockProps,
+  RichText,
+  InnerBlocks,
+  MediaUpload,
+  MediaUploadCheck,
+  InspectorControls,
+  URLInput,
+  MediaPlaceholder
+} = wp.blockEditor;
+
+function Edit(props) {
+  let {
+    attributes,
+    setAttributes
+  } = props;
+  const blockProps = useBlockProps({
+    className: 'wsu-newsletter-text-wrapper',
+    style: {}
+  });
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "block-newsletter-image-wrapper"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "block-newsletter-image-frame"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
+    src: attributes.imgSrc
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(MediaPlaceholder, {
+    icon: "format-image",
+    labels: {
+      title: 'Upload Image'
+    },
+    className: "block-image",
+    onSelect: value => {
+      setAttributes({
+        imgSrc: value.url
+      });
+      setAttributes({
+        imgId: value.id
+      });
+      console.log(value);
+    },
+    accept: "image/*",
+    allowedTypes: ['image']
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "block-newsletter-image-content"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.TextareaControl, {
+    label: "Image Cation",
+    value: attributes.imgCaption,
+    onChange: imgCaption => setAttributes({
+      imgCaption
+    })
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.TextControl, {
+    label: "Image Credit",
+    value: attributes.imgCredit,
+    onChange: imgCredit => setAttributes({
+      imgCredit
+    })
+  }))));
 }
 
 /***/ }),
@@ -500,6 +628,18 @@ __webpack_require__.r(__webpack_exports__);
 /*!*****************************************************!*\
   !*** ./blocks/newsletter-heading/editor/style.scss ***!
   \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./blocks/newsletter-image/editor/style.scss":
+/*!***************************************************!*\
+  !*** ./blocks/newsletter-image/editor/style.scss ***!
+  \***************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
