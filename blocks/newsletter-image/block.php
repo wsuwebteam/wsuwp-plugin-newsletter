@@ -17,7 +17,7 @@ class Block_Newsletter_Image {
 		switch ( $attributes['imgStyle'] ) {
 
 			default:
-				$attributes['imgSrc'] = wp_get_attachment_image_src( $attributes['imgId'], 'email-medium' )[0];
+				$attributes['imgSrc'] = ( defined( 'WSUISEMAILOUTPUT' ) ) ? wp_get_attachment_image_src( $attributes['imgId'], 'email-medium' )[0] : wp_get_attachment_image_src( $attributes['imgId'], 'large' )[0];
 				break;
 		}
 
