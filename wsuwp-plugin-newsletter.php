@@ -3,7 +3,7 @@
  * Plugin Name: BETA - WSUWP Newsletter Generator
  * Plugin URI: https://github.com/wsuwebteam/wsuwp-plugin-newsletter
  * Description: Describe the plugin
- * Version: 0.0.7
+ * Version: 0.0.8
  * Requires PHP: 7.3
  * Author: Washington State University, Danial Bleile
  * Author URI: https://web.wsu.edu/
@@ -16,7 +16,7 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-define( 'WSUWPPLUGINNEWSLETTERVERSION', '0.0.7' );
+define( 'WSUWPPLUGINNEWSLETTERVERSION', '0.0.8' );
 
 // Initiate plugin
 require_once __DIR__ . '/includes/plugin.php';
