@@ -18,15 +18,15 @@ class Scripts {
 		wp_register_script(
 			'wsuwp-plugin-newsletter-editor-scripts',
 			Plugin::get( 'url' ) . 'assets/dist/editor.js',
-			$editor_asset['dependencies'],
-			$editor_asset['version']
+			array( 'wp-element', 'wp-blocks', 'wp-components', 'wp-editor' ),
+			Plugin::get( 'version' )
 		);
 
 		wp_register_style(
 			'wsuwp-plugin-newsletter-editor-styles',
 			Plugin::get( 'url' ) . 'assets/dist/style-editor.css',
-			array(),
-			$editor_asset['version']
+			array( 'wp-edit-blocks' ),
+			Plugin::get( 'version' )
 		);
 	}
 
